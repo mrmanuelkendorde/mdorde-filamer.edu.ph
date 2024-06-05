@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="CodeHim">
+    <title>MARU Shopping Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="style/Maru-checkout.css">
+    <link rel="stylesheet" href="style/Maru.css">
+  
+  </head>
+  <body>
+ <header class="intro">
+ <h1>MARU Shopping cart</h1>
+ <p>This shopping cart is not only a project, but also a promotional website from our online selling page MARU</p>  
+ </header>
+  
+
+ <main>
+  <div class="main-container">
+    <div class="left-container">
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search for products...">
+        <button type="button" onclick="foreachSearchProducts()"><i class="fas fa-search"></i></button>
+      </div>
+        <div class="checkout-history" id="checkoutHistory">
+      <div class="cart-modal-overlay">
+        <div class="cart-modal">
+          <i id="close-btn" class="fas fa-times"></i>
+          <h1 class="cart-is-empty">Cart is empty</h1>
+          <div class="product-rows"></div>
+          <div class="total">
+            <h1 class="cart-total">TOTAL</h1>
+            <span class="total-price">₱0</span>
+            <button class="purchase-btn">Checkout</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="cart-btn">
+        <i id="cart" class="fas fa-shopping-cart"></i>
+        <span class="cart-quantity">0</span>
+      </div>
+
+      <div class="items-container" id="itemsContainer">
+    <div class="card-1 card">
+        <img class="product-image" src="./img/BABY HAT.jpg" alt="" height="140">
+        <button class="add-to-cart">Add to cart</button>
+        <p>Baby Hat</p>
+        <span class="product-price">₱75</span>
+    </div>
+    <div class="card-2 card">
+        <img class="product-image" src="./img/Baby shoes.jpg" alt="" height="140">
+        <button class="add-to-cart">Add to cart</button>
+        <p>Baby Shoes</p>
+        <span class="product-price">₱199</span>
+    </div>
+    <div class="card-3 card">
+      <img class="product-image" src="./img/Couple Bracelet.jpg" alt="" height="140">
+        <button class="add-to-cart">Add to cart</button>
+        <p>Couple Bracelet</p>
+          <span class="product-price">₱89</span>
+    </div>
+    <div class="card-4 card">
+      <img class="product-image" src="./img/Eyelash &  brow tint.jpg" alt="" height="140">
+         <button class="add-to-cart">Add to cart</button>
+        <p>Eyelash & Brow Tint</p>
+        <span class="product-price">₱229</span>
+    </div>
+    <div class="card-5 card">
+      <img class="product-image" src="./img/Eyelash Lifting Set.jpg" alt="" height="140">
+      <button class="add-to-cart">Add to cart</button>
+      <p>Eyelash Lifting Set</p>
+      <span class="product-price">₱120</span>
+    </div>
+    <div class="card-6 card">
+      <img class="product-image" src="img/anti rad glasses.jpg" alt="" height="140">
+      <button class="add-to-cart">Add to cart</button>
+      <p>Anti rad Glassess</p>
+      <span class="product-price">₱149</span>
+    </div>
+    <div class="card-7 card">
+      <img class="product-image" src="./img/Brush set.jpg" alt="" height="140">
+      <button class="add-to-cart">Add to cart</button>
+      <p>Brush Set</p>
+      <span class="product-price">₱120</span>
+    </div>
+    <div class="card-8 card">
+      <img class="product-image" src="./img/Christmas Decor.jpg" alt="" height="140">
+      <button class="add-to-cart">Add to cart</button>
+      <p>Christmas Decor</p>
+      <span class="product-price">₱299</span>
+    </div>
+    <div class="card-9 card">
+      <img class="product-image" src="./img/Cocosilva perfume.jpg" alt="" height="140">
+      <button class="add-to-cart">Add to cart</button>
+      <p>Cocosilva Perfume</p>
+      <span class="product-price">₱128</span>
+    </div>
+    <div class="card-10 card">
+      <img class="product-image" src="./img/leather watch.jpg" alt="" height="140">
+      <button class="add-to-cart">Add to cart</button>
+      <p>Leather Watch</p>
+      <span class="product-price">₱150</span>
+    </div>
+    <div class="card-11 card">
+      <img class="product-image" src="./img/Moldable false teeth.jpg" alt="" height="140">
+      <button class="add-to-cart">Add to cart</button>
+      <p>Moldable False Teeth</p>
+      <span class="product-price">₱89</span>
+    </div>
+    <div class="card-12 card">
+      <img class="product-image" src="./img/outdoor solar led.jpg" alt="" height="140">
+      <button class="add-to-cart">Add to cart</button>
+      <p>Outdoor Solar Led</p>
+      <span class="product-price">₱49</span>
+    </div>
+    <div class="card-13 card">
+      <img class="product-image" src="./img/paracord.jpg" alt="" height="140">
+      <button class="add-to-cart">Add to cart</button>
+      <p>Paracord</p>
+      <span class="product-price">₱139</span>
+    </div>
+    <div class="card-14 card">
+      <img class="product-image" src="./img/Otwoo 2 in 1 double effect lippy.jpg" alt="" height="140">
+      <button class="add-to-cart">Add to cart</button>
+      <p>Otwoo 2 in 1 Effect Lippy</p>
+      <span class="product-price">₱292</span>
+    </div>
+    <div class="card-15 card">
+      <img class="product-image" src="./img/Otwoo eyebrow powder stamo.jpg" alt="" height="140">
+      <button class="add-to-cart">Add to cart</button>
+      <p>Otwoo Eyebrow Powder Stamp</p>
+      <span class="product-price">150</span>
+    </div>
+    <div class="card-16 card">
+      <img class="product-image" src="./img/outdoor solar led.jpg" alt="" height="140">
+      <button class="add-to-cart">Add to cart</button>
+      <p>Outdorr Solar Led</p>
+      <span class="product-price">₱149</span>
+    </div>
+    <div class="card-17 card">
+      <img class="product-image" src="./img/type b set charger.jpg" alt="" height="140">
+      <button class="add-to-cart">Add to cart</button>
+      <p>Tyoe B Set Charger</p>
+      <span class="product-price">₱139</span>
+    </div>
+    <div class="card-18 card">
+      <img class="product-image" src="./img/Reusable EYELASH SET.jpg" alt="" height="140">
+      <button class="add-to-cart">Add to cart</button>
+      <p>Reusable Eyelash Set</p>
+      <span class="product-price">₱199</span>
+    </div>
+    <div class="card-19 card">
+      <img class="product-image" src="./img/Otwoo eyebrow powder stamo.jpg" alt=""height="140">
+      <button class="add-to-cart">Add to cart</button>
+      <p>Otwoo Eyebrow Powder Stamo</p>
+      <span class="product-price">249</span>
+    </div>
+    <div class="card-20 card">
+      <img class="product-image" src="./img/Otwoo 2 in 1 double effect lippy.jpg" alt=""height="140">
+      <button class="add-to-cart">Add to cart</button>
+      <P>Otwo 2 in 1 Effect lippy</P>
+      <br>
+      <span class="product-price">₱89</span>
+    </div>
+    <div class="card-21 card">
+      <img class="product-image" src="./img/Hand Spinner Pen.jpg" alt=""height="140">
+      <button class="add-to-cart">Add to cart</button>
+      <p>Hand Spinner Pen</p>
+      <span class="product-price">₱39</span>
+    </div>
+    <div class="card-22 card">
+      <img class="product-image" src="./img/PANG NAILS.jpg" alt=""height="140">
+      <button class="add-to-cart">Add to cart</button>
+      <p>Pang Nails Set</p>
+      <span class="product-price">₱249</span>
+    </div>
+    <div class="card-23 card">
+      <img class="product-image" src="./img/Sacelady Tinted Lip Balm.jpg" alt=""height="140">
+      <button class="add-to-cart">Add to cart</button>
+      <p>Sacelady Tinted Lip Balm</p>
+      <span class="product-price">₱1230</span>
+    </div>
+    <div class="card-24 card">
+      <img class="product-image" src="./img/Skyvii Inhaler.jpg" alt=""height="140">
+      <button class="add-to-cart">Add to cart</button>
+      <p>Skyvii Inhaler</p>
+      <span class="product-price">₱129</span>
+    </div>
+    <div class="card-25 card">
+      <img class="product-image" src="./img/Liver cleansing nasal inhaler.jpg" alt=""height="140">
+      <button class="add-to-cart">Add to cart</button>
+      <p>Liver cleansing nasal inhaler</p>
+      <span class="product-price">₱99</span>
+    </div>
+    <div class="card-26 card">
+      <img class="product-image" src="./img/Lip Glaze.jpg" alt=""height="140">
+      <button class="add-to-cart">Add to cart</button>
+      <p>Lip Glaze</p>
+      <span class="product-price">₱29</span>
+    </div>
+    <div class="card-27 card">
+      <img class="product-image" src="./img/Nicor Inhaler.jpg" alt=""height="140">
+      <button class="add-to-cart">Add to cart</button>
+      <p>Nicor Inhaler</p>
+      <span class="product-price">₱129</span>
+    </div>
+    <div class="card-28 card">
+      <img class="product-image" src="./img/Energy Bar Inhaler.jpg" alt=""height="140">
+      <button class="add-to-cart">Add to cart</button>
+      <p>Energy Bar Inhaler</p>
+      <span class="product-price">₱129</span>
+    </div>
+    <div class="card-29 card">
+      <img class="product-image" src="./img/Deep Brow Pomade.jpg" alt=""height="140">
+      <button class="add-to-cart">Add to cart</button>
+      <p>Deep Brow Pomade</p>
+      <span class="product-price">₱89</span>
+    </div>
+    <div class="card-30 card">
+      <img class="product-image" src="./img/Concealer Stick.jpg" alt=""height="140">
+      <button class="add-to-cart">Add to cart</button>
+      <p>Concealer Stick</p>
+      <span class="product-price">₱79</span>
+    </div>
+    
+  </div>
+</div>
+</div>  
+ </main>
+ 
+  <script src="./js/Maru.js"></script>
+  </body>
+</html>
